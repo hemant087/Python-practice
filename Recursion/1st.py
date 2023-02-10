@@ -196,17 +196,47 @@
 
 
 
-num = int(input("enter the number : "))
-if num==0:
-    print(1)
-elif num==1:
-    print(1,1)
-else:
-    print(1,1,end=" ")
-    a=1
-    b=1
-    for i in range(2,num):
-       c=a+b
-       print (c,end=" ")
-       a=b
-       b=c
+# num = int(input("enter the number : "))
+# if num==0:
+#     print(1)
+# elif num==1:
+#     print(1,1)
+# else:
+#     print(1,1,end=" ")
+#     a=1
+#     b=1
+#     for i in range(2,num):
+#        c=a+b
+#        print (c,end=" ")
+#        a=b
+#        b=c
+
+
+
+
+
+# num = int(input("enter the number : "))
+# count = 0
+# for i in range(1,num+1):
+#     if num%i==0:
+#         count +=1
+# if count<3:
+#     print(num," is prime number")
+# else:
+#     print("its not a prime number ")
+
+# print(count)
+
+
+
+
+num = int(input("Enter :"))
+x= 1
+while x*x<num:
+    if num%x==0:
+        print(x)
+        print(num//x)
+    x+=1
+if x*x==num:
+    print(x)
+
