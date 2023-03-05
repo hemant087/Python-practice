@@ -466,11 +466,115 @@
 
 # for i in range(n):
 
-x = 0
-b=200
-while True:
-    if x < 10:
-        x = int(input("enter : "))
-        continue
-    elif b < x < b + 2:
-        break
+# x = 0
+# b=200
+# while True:
+#     if x < 10:
+#         x = int(input("enter : "))
+#         continue
+#     elif b < x < b + 2:
+#         break
+
+
+# # get the maximum
+# def get_max(L):
+#     maxi = L[0]
+#     for x in L:
+#         if x > maxi:
+#             maxi = x
+#     return maxi
+# # get the minimum
+
+
+# def get_min(L):
+#     mini = L[0]
+#     for x in L:
+#         if x < mini:
+#             mini = x
+#     return mini
+# # get the range
+
+
+# def get_range(L):
+#     maxi = get_max(L)
+#     mini = get_min(L)
+#     return maxi - mini
+
+
+# def is_perfect(num):
+#     # Factor sum
+#     fsum = 0
+#     for f in range(1, num):
+#         if num % f == 0:
+#             fsum += f
+#     # fsum == num is a Boolean expression
+#     # It will evaluate to True if num is a perfect number
+#     # And False otherwise
+#     return fsum == num
+
+
+# print(is_perfect(int(input())))
+
+
+# def distance(word_1, word_2):
+#     # first condition
+#     if len(word_1) != len(word_2):
+#         return -1
+#     letters = 'abcdefghijklmnopqrstuvwxyz'
+#     size = len(word_1)
+#     dist = 0
+#     for i in range(size):
+#         c1, c2 = word_1[i], word_2[i]
+#     # distance between letters
+#     d = abs(letters.index(c1) - letters.index(c2))
+#     dist += d
+#     return dist
+
+
+# def is_magic(mat):
+#     # first get the dimension of the matrix
+#     m = len(mat)
+#     # the sum of the two diagonals
+#     d1sum, d2sum = 0, 0
+#     # (i, i) goes from top-left -> bottom-right
+#     # (i, m - i - 1) goes from top-right -> bottom-left
+#     # note that a single loop is enough; no nesting required
+#     for i in range(m):
+#         d1sum += mat[i][i]
+#         d2sum += mat[i][m - i - 1]
+#     # if the two diagonal sums are unequal, we can return NO
+# # unnecessary computation can be avoided
+#     if not (d1sum == d2sum):
+#         return 'NO'
+#     # get row-sum and column-sum
+#     for i in range(m):
+#         rsum, csum = 0, 0
+#         for j in range(m):
+#             rsum += mat[i][j]
+#             csum += mat[j][i]
+#         if not (rsum == csum == d1sum):
+#             return 'NO'
+#     # if the code reaches this level
+#     # then all requirements of a magic-square are satisfied
+#     # so we can safely return YES
+#     return 'YES'
+
+
+# Refer PPAs to understand this function
+def get_column(mat, col):
+    col_list = []
+    m = len(mat)
+    for row in range(m):
+        col_list.append(mat[row][col])
+    return col_list
+# We make use of get_column
+# to get the ith column
+# this is made the ith row in the transpose
+
+
+def transpose(mat):
+    m, n = len(mat), len(mat[0])
+    mat_trans = []
+    for i in range(n):
+        mat_trans.append(get_column(mat, i))
+    return mat_trans
