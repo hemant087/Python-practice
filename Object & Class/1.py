@@ -45,35 +45,98 @@
 # Multiple level inheritance enables one derived class to inherit properties from more than one base class.
 
 
-class Person:
-    def __init__(self, name, id):
-        self.name = name
-        self.id = id
+# class Person:
+#     def __init__(self, name, id):
+#         self.name = name
+#         self.id = id
 
-    def temp(self):
-        print(self.name)
-        print(self.name)
+#     def temp(self):
+#         print(self.name)
+#         print(self.name)
 
-# childe class
-
-
-class employ(Person):
-    def __init__(self, name, id, location, work):
-        self.location = location
-        self.work = work
-        # inheriting the property
-        Person.__init__(self, name, id)
-
-    def display(self):
-        print(self.location)
-        print(self.work)
+# # childe class
 
 
-# p1 = Person()
-e1 = employ("hemant", 587, 'maranga', 'sd1')
+# class employ(Person):
+#     def __init__(self, name, id, location, work):
+#         self.location = location
+#         self.work = work
+#         # inheriting the property
+#         Person.__init__(self, name, id)
 
-# e1.temp()
-# e1.display()
+#     def display(self):
+#         print(self.location)
+#         print(self.work)
 
-print(e1.__dict__)
-# print(p1.__dict__)
+
+# # p1 = Person()
+# e1 = employ("hemant", 587, 'maranga', 'sd1')
+
+# # e1.temp()
+# # e1.display()
+
+# print(e1.__dict__)
+# # print(p1.__dict__)
+
+
+
+class Student:
+    def __init__(self,name,id):
+        self.name= name
+        self.id=id
+    def show(self):
+        print("My name is {} and".format(self.name))
+        print("My id is {} and".format(self.id))
+    
+        # Student.__init__(self,name,id)
+
+# class Staff(Student):
+#     def __init__(self, name, id,position,sealery):
+#         self.position=position
+#         self.sealery=sealery
+#         # self.name=name
+#         # self.id= id
+#         Student.__init__(self,name,id)
+
+#     def display(self):
+#         print(self.name)
+#         print(self.id)
+#         print(self.position)
+#         print(self.sealery)
+
+
+
+# s1=Staff('hemant',587,'student',2000)
+# s1.display()
+# s1.show()
+# Staff.__dict__()
+
+
+
+# ...........................Calculator........................................
+
+
+
+class calculator():
+    def __init__(self,num1,num2):
+        self.num1=num1
+        self.num2=num2
+class addition(calculator):
+    def add(self,num1,num2):
+        print("{} + {} = {}".format(num1,num2,num1+num2))
+        calculator.__init__(self,num1,num2)
+class subtractions(calculator):
+    def sub(self,num1,num2):
+        print("{} - {} = {}".format(num1,num2,num1-num2))
+        calculator.__init__(self,num1,num2)
+class multiplication(calculator):
+    def multi(self,num1,num2):
+        print("{} x {} = {}".format(num1,num2,num1*num2))
+        calculator.__init__(self,num1,num2)
+
+
+num1=int(input())
+num2=int(input())
+
+cl=addition(num1,num2)
+cl.add()

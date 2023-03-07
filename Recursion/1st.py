@@ -561,20 +561,50 @@
 
 
 # Refer PPAs to understand this function
-def get_column(mat, col):
-    col_list = []
-    m = len(mat)
-    for row in range(m):
-        col_list.append(mat[row][col])
-    return col_list
-# We make use of get_column
-# to get the ith column
-# this is made the ith row in the transpose
+# def get_column(mat, col):
+#     col_list = []
+#     m = len(mat)
+#     for row in range(m):
+#         col_list.append(mat[row][col])
+#     return col_list
+# # We make use of get_column
+# # to get the ith column
+# # this is made the ith row in the transpose
 
 
-def transpose(mat):
-    m, n = len(mat), len(mat[0])
-    mat_trans = []
-    for i in range(n):
-        mat_trans.append(get_column(mat, i))
-    return mat_trans
+# def transpose(mat):
+#     m, n = len(mat), len(mat[0])
+#     mat_trans = []
+#     for i in range(n):
+#         mat_trans.append(get_column(mat, i))
+#     return mat_trans
+
+
+
+
+# def fact(n):
+#     a=1
+#     for i in range(1,n+1):
+#         a=a*i
+#         print(a)
+#     return a
+
+
+# print("This is your factorial :  ",fact(5))
+
+
+
+# def first_three(L):
+#     f,s,t=0,0,0
+#     for i in L:
+#         if i>f:
+#            f=i
+#            s=f
+#            t=s 
+#     return [f,s,t]
+
+
+# L=[1,2,3,4,5,6]
+# first_three(L)
+
+
