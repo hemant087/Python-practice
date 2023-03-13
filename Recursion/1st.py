@@ -580,8 +580,6 @@
 #     return mat_trans
 
 
-
-
 # def fact(n):
 #     a=1
 #     for i in range(1,n+1):
@@ -593,14 +591,13 @@
 # print("This is your factorial :  ",fact(5))
 
 
-
 # def first_three(L):
 #     f,s,t=0,0,0
 #     for i in L:
 #         if i>f:
 #            f=i
 #            s=f
-#            t=s 
+#            t=s
 #     return [f,s,t]
 
 
@@ -608,3 +605,369 @@
 # first_three(L)
 
 
+# -----------------------------------------------------------------
+
+
+# num = input()
+# count=0
+# correct =""
+
+# for i in num:
+#     if i=="i":
+#         correct = correct+"1"
+#         count +=1
+#     elif i =="o":
+#         correct = correct+"0"
+#         count +=1
+#     else:
+#         correct = correct+i
+
+
+# x=2
+# cfrac = x+(x+1/(x+1/(x+1/(x+1/(x+1/x)))))
+# # cfrac =x+(1/x)
+# print(cfrac)
+
+# str = input()
+# start = int(input())
+# end = int(input())
+# new = ""
+
+# while len(new) < len(str):
+#     for i in range(len(str)):
+#         if start <= i and i <= end:
+#             new+=str[i]
+
+# print(new)
+
+
+# m = int(input())
+# n = int(input())
+
+# if m < n:
+#     print(m)
+# else:
+#     while m > n:
+#         m -= n
+#         # print(m)
+#     print(m)
+
+
+# num = []
+# count = 0
+# while count < 4:
+#     num.append(int(input()))
+#     count += 1
+# num = sorted(num)
+# print(num)
+# print(" ".join(str(i) for i in num))
+
+
+# x = []
+# count=0
+# while count<4:
+#     x.append(int(input()))
+#     count +=1
+# x.sort()
+
+# print(" ".join(str(i) for i in x))
+
+
+# word = "edoucatinmoon"
+# vowels = ['a', 'e', 'i', 'o', 'u']
+# for v in vowels:
+#     if v not in word:
+#         print('not perfect')
+#         break
+# else:
+#     vowel_count = [word.count(v) for v in vowels]
+#     for i in range(len(vowels)):
+#         for j in range(i+1,len(vowels)):
+#             if word.find(vowels[i])>word.find(vowels[j]):
+#                 print('not perfect')
+#                 break
+#             if vowel_count[i]<vowel_count[j]:
+#                 print('not perfect')
+#                 break
+#         else:
+#             continue
+#         break
+#     else:
+#         print('perfect')
+
+
+# (pas[0].isupper() or pas[0].islower())
+
+# pas = input()
+# spc = ['/', '\\', '=', "'", '"', ' ']
+# if 8 >= len(pas) <= 32 or not(pas[0].isalpha()) or any(char in spc for char in pas) :
+#     print('False')
+# else:
+#     print('True')
+
+
+# str = input()
+
+# vowel = ['a','e','i','o','u']
+
+# for v in vowel:
+#     if v not in str:
+#         print("not perfect")
+#         break
+# else:
+#     vowel_count =
+#     for i in range(len(str))
+
+# pas = input()
+# valid = False
+# if 8<=len(pas)<=32 and pas[0].isalpha():
+#     if not('/'in pas or '\\'in pas or '='in pas or '"'in pas or "'"in pas or " "in pas):
+#         valid = True
+# print(valid)
+
+# name1= input()
+# dob1= input()
+# name2= input()
+# dob2= input()
+
+# dob1 = dob1.split("-")
+# dob2 = dob2.split("-")
+
+
+# if dob1[2]>dob2[2]:
+#     print(name1)
+# elif dob1[2]==dob2[2] and dob1[1]>dob2[2]:
+#     print(name1)
+# elif dob1[2]==dob2[2] and dob1[1]==dob2[2] and dob1[0]>dob2[0]:
+#     print(name1)
+# elif dob1==dob2:
+#     if name1 > name2:
+#         print(name2)
+#     else:
+#         print(name1)
+# else:
+#     print(name2)
+
+# print("Neha"<"Priya")
+
+
+# string = input()
+# string = string.lower()
+# vowels = ['a', 'e', 'i', 'o', 'u']
+# res = []
+# for char in vowels:
+#     if char in string:
+#         res.append(char)
+
+# if len(res) > 0:
+#     print("".join(res))
+# else:
+#     print("none")
+
+# id = []
+# for i in range(5):
+#     id.append(int(input()))
+# print(id)
+# count = 0
+# for i in range(0,len(id)-1):
+#     if (id[i]+id[i+1]) %2==0:
+#         count +=1
+# if count>3:
+#     print("Yes")
+# else:
+#     print("No")
+
+
+# -------------------------------------------------
+
+
+# num = input()
+# num = num.split(',')
+# temp = []
+# for i in num:
+#     temp.append(int(i))
+
+# # left sum
+# left_sum = 0
+# for i in range(0, (len(temp)//2)):
+#     left_sum += temp[i]
+
+# right_sum = 0
+# for i in range((len(temp)//2), len(temp)):
+#     right_sum += temp[i]
+
+# if left_sum > right_sum:
+#     print("left_heavy")
+# else:
+#     print("right_heavy")
+
+
+# def get_column(mat, col):
+#     res = []
+#     for i in range(len(mat)):
+#         if col ==0:
+#             res.append(mat[i][0])
+#         elif col ==1:
+#             res.append(mat[i][1])
+#     return res
+
+# # def get_row(mat, row):
+
+# mat= [[1, 2], [3, 4]]
+# col = 0
+# temp = get_column(mat, col)
+
+# print(temp)
+
+
+# def insert(L, x):
+#     temp = []
+#     for i in range(len(L)):
+#         if L[i]>x:
+#             temp.append(L[i])
+#             # L.remove(L[i])
+
+#     for i in range(len(L)-1):
+#         if L[i]>x:
+#             L.remove(L[i])
+#     L.remove(L[-1])
+#     L.append(x)
+#     L=L+temp
+#     return L
+
+# L= [1,2,3,5,6]
+# x=4
+# print(insert(L,x))
+
+
+# ----------------------------------------------------------------------------
+
+# def matrix_type(matrix):
+#     n = len(matrix)  # get the size of the matrix
+
+#     # check if the matrix is diagonal
+#     is_diagonal = True
+#     for i in range(n):
+#         for j in range(n):
+#             if i != j and matrix[i][j] != 0:
+#                 is_diagonal = False
+#                 break
+#         if not is_diagonal:
+#             break
+#     if is_diagonal:
+#         return "diagonal"
+
+#     # check if the matrix is scalar
+#     is_scalar = True
+#     for i in range(n):
+#         for j in range(n):
+#             if i == j and matrix[i][j] != matrix[0][0]:
+#                 is_scalar = False
+#                 break
+#             if i != j and matrix[i][j] != 0:
+#                 is_scalar = False
+#                 break
+#         if not is_scalar:
+#             break
+#     if is_scalar:
+#         return "scalar"
+
+#     # check if the matrix is identity
+#     is_identity = True
+#     for i in range(n):
+#         for j in range(n):
+#             if i == j and matrix[i][j] != 1:
+#                 is_identity = False
+#                 break
+#             if i != j and matrix[i][j] != 0:
+#                 is_identity = False
+#                 break
+#         if not is_identity:
+#             break
+#     if is_identity:
+#         return "identity"
+
+#     # if none of the above conditions are satisfied, the matrix is non-diagonal
+#     return "non-diagonal"
+
+
+# m = [[1, 2, 3], [4, 1, 6], [7, 8, 1]]
+# dig = []
+# flag = True
+# for i in range(len(m)):
+#     for j in range(len(m[0])):
+#         if i!=j and m[i][j] != 0:
+#            print("it is not a diagonal")
+#            flag = False
+#            break
+#         #    dig.append(m[i][j])
+#     if not flag:
+#         break
+# print(flag)
+# # print(dig)
+
+def matrix_type(M):
+    flag = True
+    scl = True
+    id = True
+    for i in range(len(M)):
+        for j in range(len(M[0])):
+            if i != j and M[i][j] !=0:
+                flag = False
+                break
+            elif i ==j and M[i][j] !=M[0][0]:
+                scl = False
+                break
+            elif i == j and M[i][j] != 1:
+                id = False
+                break
+        if not flag:
+            break
+    
+    if flag and id:
+        return "identity"
+    elif flag and scl:
+        return "scalar"
+    elif flag :
+        return "diagonal"
+    else:
+        return "non-diagonal"
+
+# Test case 6: Non-square matrix
+M6 = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+print(matrix_type(M6))  # expected output: "non-diagonal"
+
+# Test case 7: Non-diagonal matrix with some zeros
+M7 = [
+    [1, 0, 3],
+    [0, 2, 0],
+    [0, 0, 5]
+]
+print(matrix_type(M7))  # expected output: "non-diagonal"
+
+# Test case 8: Scalar matrix with negative elements
+M8 = [
+    [-2, 0, 0],
+    [0, -2, 0],
+    [0, 0, -2]
+]
+print(matrix_type(M8))  # expected output: "scalar"
+
+# Test case 9: Identity matrix with decimal elements
+M9 = [
+    [1.0, 0, 0],
+    [0, 1.0, 0],
+    [0, 0, 1.0]
+]
+print(matrix_type(M9))  # expected output: "identity"
+
+# Test case 10: Diagonal matrix with non-integer elements
+M10 = [
+    [3.5, 0, 0],
+    [0, -2.1, 0],
+    [0, 0, 0.8]
+]
+print(matrix_type(M10))  # expected output: "diagonal"
