@@ -906,68 +906,101 @@
 # print(flag)
 # # print(dig)
 
-def matrix_type(M):
+# def matrix_type(M):
+#     flag = True
+#     scl = True
+#     id = True
+#     for i in range(len(M)):
+#         for j in range(len(M[0])):
+#             if i != j and M[i][j] !=0:
+#                 flag = False
+#                 break
+#             elif i ==j and M[i][j] !=M[0][0]:
+#                 scl = False
+#                 break
+#             elif i == j and M[i][j] != 1:
+#                 id = False
+#                 break
+#         if not flag:
+#             break
+
+#     if flag and id:
+#         return "identity"
+#     elif flag and scl:
+#         return "scalar"
+#     elif flag :
+#         return "diagonal"
+#     else:
+#         return "non-diagonal"
+
+# def matrix_type(M):
+#     flag = False
+#     temp = []
+#     n = len(M)
+#     for i range(n):
+#         for j in range(n):
+#             if i !=j:
+#                 if M[i][j] != 0:
+#                     flag = True
+#                     break
+#             elif i==j:
+#                 temp.append(M[i][j])
+#     if flag:
+#         return "non-diagonal"
+#     elif all(i ==1 for i in temp:
+#         return "identity"
+#     elif all(i==temp[0] for i in temp:
+#         return "scalar"
+#     else:
+#         return "diagonal"
+
+
+# li  = [1,2,3,4,5]
+# k=3
+# temp = []
+# for i in li[k-1::-1]:
+#     temp.append(i)
+# for i in li[k:len(li)]:
+#     temp.append(i)
+
+# print(temp)
+
+
+# arr = [1, 2, 4, 2, 7, 9, 5, 4, 7,8]
+# n = len(arr)
+# k = 3
+# li = []
+# for i in range(k):
+#     li.append(arr[i])
+# res = []
+# res.append(max(li))
+# print(li)
+# for i in range(k, n):
+#     li.remove(li[0])
+#     li.append(arr[i])
+#     res.append(max(li[0], li[1], li[2]))
+# print(res)
+# print(li)
+
+
+
+arr = [1001,2002,3003,5005,6006,3121]
+ 
+
+for i in range(len(arr)):
+    dig = []
+    while arr[i]>0:
+        dig.append(arr[i]%10)
+        arr[i]= arr[i]//10
+    temp =-1
     flag = True
-    scl = True
-    id = True
-    for i in range(len(M)):
-        for j in range(len(M[0])):
-            if i != j and M[i][j] !=0:
-                flag = False
-                break
-            elif i ==j and M[i][j] !=M[0][0]:
-                scl = False
-                break
-            elif i == j and M[i][j] != 1:
-                id = False
-                break
-        if not flag:
+    for i in range(0,len(dig)//2):
+        if dig[i]==dig[temp]:
+            temp -=1
+        else:
+            flag = False
             break
-    
-    if flag and id:
-        return "identity"
-    elif flag and scl:
-        return "scalar"
-    elif flag :
-        return "diagonal"
-    else:
-        return "non-diagonal"
 
-# Test case 6: Non-square matrix
-M6 = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_type(M6))  # expected output: "non-diagonal"
-
-# Test case 7: Non-diagonal matrix with some zeros
-M7 = [
-    [1, 0, 3],
-    [0, 2, 0],
-    [0, 0, 5]
-]
-print(matrix_type(M7))  # expected output: "non-diagonal"
-
-# Test case 8: Scalar matrix with negative elements
-M8 = [
-    [-2, 0, 0],
-    [0, -2, 0],
-    [0, 0, -2]
-]
-print(matrix_type(M8))  # expected output: "scalar"
-
-# Test case 9: Identity matrix with decimal elements
-M9 = [
-    [1.0, 0, 0],
-    [0, 1.0, 0],
-    [0, 0, 1.0]
-]
-print(matrix_type(M9))  # expected output: "identity"
-
-# Test case 10: Diagonal matrix with non-integer elements
-M10 = [
-    [3.5, 0, 0],
-    [0, -2.1, 0],
-    [0, 0, 0.8]
-]
-print(matrix_type(M10))  # expected output: "diagonal"
+print(flag)
+print(dig)
+print(len(dig)//2)
