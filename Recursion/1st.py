@@ -983,24 +983,222 @@
 # print(li)
 
 
+# arr = [1001,2002,3003,5005,6006,3121]
 
-arr = [1001,2002,3003,5005,6006,3121]
- 
 
-for i in range(len(arr)):
-    dig = []
-    while arr[i]>0:
-        dig.append(arr[i]%10)
-        arr[i]= arr[i]//10
-    temp =-1
-    flag = True
-    for i in range(0,len(dig)//2):
-        if dig[i]==dig[temp]:
-            temp -=1
+# for i in range(len(arr)):
+#     dig = []
+#     while arr[i]>0:
+#         dig.append(arr[i]%10)
+#         arr[i]= arr[i]//10
+#     temp =-1
+#     flag = True
+#     for i in range(0,len(dig)//2):
+#         if dig[i]==dig[temp]:
+#             temp -=1
+#         else:
+#             flag = False
+#             break
+
+# print(flag)
+# print(dig)
+# print(len(dig)//2)
+
+
+# def sor(A,B):
+#     A.sort()
+#     B.sort()
+#     print(A)
+#     for i in range(len(A)):
+#         if A[i] != B[i]:
+#             return False
+#     else:
+#         return True
+
+# A=[1,2,5,4,0]
+# B=[2,4,5,0,1]
+# print(sor(A,B))
+
+
+# def merge(D1, D2, p):
+#     delete = []
+#     for key in D1.keys():
+#         if key in D2 and p == "first":
+#             delete.append(key)
+#         elif key in D2 and p == 'second':
+#             delete.append(key)
+#     for key in delete:
+#         if p == 'first':
+#             del D2[key]
+#         elif p == 'second':
+#             del D1[key]
+
+#     D = {**D1, **D2}
+#     print(D)
+
+
+# def merge(D1, D2, priority):
+#     keys_to_delete = []
+#     for key in D1.keys():
+#         if key in D2:
+#             keys_to_delete.append(key)
+
+#     for key in keys_to_delete:
+#         if priority == 'first':
+#             del D2[key]
+#         elif priority == 'second':
+#             del D1[key]
+#     D = { **D1, **D2 }
+#     return D
+
+# D1 = {'a': 1, 'b': 2}
+# D2 = {'a': 10, 'c': 3}
+# P = 'second'
+# print(merge(D1, D2, P))
+
+
+# def minor_matrix(M, i, j):
+#     for x in range(len(M)):
+#         row = []
+#         if x == i:
+#             continue
+#         for y in range(len(M[0])):
+#             if y !=j:
+#                 row.append(M[x][y])
+#         print(*row,sep = ',')
+
+# M = [[1, 2, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]]
+# i = 0
+# j = 1
+
+# minor_matrix(M, i, j)
+
+
+# n = int(input())
+# station_dict = {}
+# for tr in range(n):
+#     name_train = input()
+#     m = int(input())
+#     compartment_dict = {}
+#     for cl in range(m):
+#         coach = input().strip().split(',')
+#         compartment = coach[0].strip()
+#         num_psng = int(coach[1].strip())
+#         compartment_dict[compartment]=num_psng
+#     station_dict[name_train]=compartment_dict
+# print(station_dict)
+# print('\n',compartment)
+# print('\n',compartment_dict)
+# print('\n',num_psng)
+# print('\n',coach)
+# print('\n',coach)
+
+
+# names = ["6", "Harsh", "Gaurav", "GauravMiglani", "HarshAgarwal", "GeeksforGeeksGeeks","Programmiz"]
+# t, n = 0, 0
+# for i in range(len(names)):
+#     k = len(names[i])
+#     if t < k:
+#         t = k
+#         n = i
+# print(names[n])
+
+
+# class Solution:
+#     def findElements(self,a, n):
+#         a.sort()
+#         b=a[-1::-1]
+#         c=b[2:]
+#         return c[-1::-1]
+
+# n=19
+# ans = str(n)+str(n*2)+str(n*3)
+# temp = []
+# for i in ans:
+#     temp.append(int(i))
+# count =1
+# temp.sort()
+# for i in temp:
+#     if i !=count:
+#         print(False)
+#     else:
+#         count +=1
+# else:
+#     print(True)
+
+
+# a = [4, 2, 7]
+# b = [5, 6, 3]
+# x, y = 0, 0
+# for i in range(len(a)):
+#     if a[i] > b[i]:
+#         x += 1
+#     elif a[i] < b[i]:
+#         y += 1
+# print(x, y)
+
+# def min(li):
+#     m = li[0]
+#     for i in li:
+#         if m > i:
+#             m = i
+#     return m
+
+
+# def sort(li):
+#     m = min(li)
+#     print(m)
+#     li.remove(m)
+#     return [m] + sort(li)
+
+
+# li = [5, 4, 3, 8, 9, 2]
+# print(sort(li))
+
+
+# ........................binary search
+
+# def binary_sort(li, key):
+#     start = 0
+#     end = len(li)-1
+#     while start<=end:
+#         mid = (start+end)//2
+#         if li[mid] == key:
+#             return mid
+#         elif li[mid] > key:
+#             end = mid-1
+#         else:
+#             start = mid+1
+#     return -1 
+
+
+# li = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# n = 9
+# print(binary_sort(li, n))
+
+
+
+#                  recursive binary search
+
+def rec_binary(l,key,start,end):
+    if start>end:
+        return -1
+    else:
+        mid = (start+end)//2
+        if l[mid]==key:
+            return mid
+        elif l[mid]>key:
+           return rec_binary(l,key,start,mid-1)
         else:
-            flag = False
-            break
+           return rec_binary(l,key,mid+1,end)
 
-print(flag)
-print(dig)
-print(len(dig)//2)
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+n = 8
+print(rec_binary(li, n,0,len(li)-1))
+
+
+
+
+
