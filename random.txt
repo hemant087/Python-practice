@@ -1,0 +1,4 @@
+I worked for a while for a  search engine company whose middleware had been written by an insane person who had moved on. Some of the characteristicsThis company had a new CEO who wanted to sell this stuff to other industries than their one customer, a three-letter agency
+of the US government, and I was hired to replace this stuff with something reliable. However, they made all their money on who sat in basements in Virginia babysitting the thing and fixing things with hex editors when it corrupted
+its own data, which was a few times daily. The software being embarrassingly broken *was* their cash cow. And I learned that this was not unusual.So I do not wonder why Snowden had access to what he had access to, or why the first version of the Obamacare web site was a
+disaster, or why Hillary might not have wanted to use a mail system run by contractors such as this. This is the state of government IT.

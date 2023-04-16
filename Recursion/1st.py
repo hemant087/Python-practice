@@ -1171,7 +1171,7 @@
 #             end = mid-1
 #         else:
 #             start = mid+1
-#     return -1 
+#     return -1
 
 
 # li = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -1179,26 +1179,764 @@
 # print(binary_sort(li, n))
 
 
-
 #                  recursive binary search
 
-def rec_binary(l,key,start,end):
-    if start>end:
-        return -1
-    else:
-        mid = (start+end)//2
-        if l[mid]==key:
-            return mid
-        elif l[mid]>key:
-           return rec_binary(l,key,start,mid-1)
-        else:
-           return rec_binary(l,key,mid+1,end)
-
-li = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-n = 8
-print(rec_binary(li, n,0,len(li)-1))
+# def rec_binary(l,key,start,end):
+#     if start>end:
+#         return -1
+#     else:
+#         mid = (start+end)//2
+#         if l[mid]==key:
+#             return mid
+#         elif l[mid]>key:
+#            return rec_binary(l,key,start,mid-1)
+#         else:
+#            return rec_binary(l,key,mid+1,end)
 
 
+# def member(L, x):
+#     if len(L) == 0:
+#         return False
+#     if len(L) == 1:
+#         return L[0] == x
+#     return member(L[: -1], x)
 
 
+# L = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(member(L, 8))
+# n = 8
+# print(rec_binary(li, n,0,len(li)-1))
 
+# def sum(n):
+#     if n ==0:
+#         return
+#     else:
+#         print(n,end=",")
+#         sum(n-1)
+#         print(n)
+#         return
+# sum(5)
+
+# l = [1, 2, 3, 4, 5]
+
+# def sort(l,key):
+#     if key == l[len(l)]:
+#         return 1
+#     else:
+
+
+#                        tower of hanoi
+
+
+# def towerOfHanoi(n,s,h,d):
+#     if n==1:
+#         print("\n1st disc is moved from ",s," to ",d)
+#         return
+#     towerOfHanoi(n-1,s,d,h)
+#     print("\n",f"{n}th term is move from", s,"to",d)
+#     towerOfHanoi(n-1,h,s,d)
+
+
+# towerOfHanoi(4,'source','helper','destination')
+
+
+# .........................................replace string by using recursion
+
+
+# def replace(l,a,g):
+#     if len(l)==0:
+#         return l
+#     smallest = replace(l[1:],a,g)
+#     if l[0]==a:
+#         return g+smallest
+#     else:
+#         return l[0]+smallest
+
+# print(replace('haa haa haa ! ','a','g'))
+
+
+# str = "[({()})]"
+# stack = []
+
+# for i in str:
+#     if i =="("or i=="{"or i=='[':
+#         stack.append(i)
+#     else:
+#         if len(stack)==0:
+#             return False
+#         top = stack[len(stack)]
+
+
+# def gfSeries(N):
+
+#     if N == 1:
+#         return [0]
+#     elif N == 2:
+#         return [0,1]
+#     else:
+#         prTerm = gfSeries(N-1)
+#         cuTerm = (prTerm[-2]**2-prTerm[-1])
+#         prTerm.append(cuTerm)
+#         return prTerm
+
+
+# print(gfSeries(6))
+
+# arr= [2,4,6,6,6,6,6,6,6,7,9,0,3]
+# x=6
+# ans = []
+# ans.extend([i for i in range(len(arr)) if arr[i]==x])
+# print(ans)
+
+
+# def minDist(self, arr, n, x, y):
+#         first = 0
+#         second =0
+#         for i in range(len(arr)):
+#             if x == arr[i]:
+#                 first = i
+#             elif y == arr[i]:
+#                 second = arr[i]
+#         return min(abs(first-second),abs((len(arr)-second)+first))
+
+
+# arr = [1,2,3,4,5,6,7,8,5,4,3,5,6,7,88,5,5,]
+
+
+# arr.insert(0,arr[-1])
+# arr.pop(arr[-1])
+# print(arr)
+
+
+# arr = [1, 97, 14, 4, 6, 66, 94, 40, 49, 68, 16, 36, 20, 38, 25, 31, 12,
+#        42, 52, 28, 67, 87, 16, 87, 27, 67, 34, 4, 76, 45, 38, 76, 41, 51, 31]
+# a, b = 97, 67
+
+# if a and b not in arr:
+#             print(-1)
+# f = arr.index(a)
+# s = arr.index(b)
+# x=abs(f-s)
+# y=abs((len(arr)-arr.index(b))+arr.index(a))
+# print([x,y], "<---- here")
+# print(min(x,y))
+
+# if a not in arr or b not in arr:
+#     print(-1)
+
+# flag = None
+# for i in range(len(arr)):
+#     if arr[i] == a or arr[i] == b:
+#         if flag is not None and arr[i] != flag:
+#             print(i - flag)
+#             break
+#         flag = i
+# else:
+#     print(-1)
+
+
+# def Maximize(self, a, n):
+#     # Complete the function
+#     sum1 = 0
+#     for i in range(len(a)):
+#         sum1 += a[i]*i
+#     a = a[len(a):0:-1]
+#     sum = 0
+#     for i in range(len(a)):
+#         sum += a[i]*i
+#     return max(sum, sum1)
+
+# sum1 = 0
+# for i in range(len(a)):
+#     sum1 += a[i]*i
+# # a = a[len(a):0:-1]
+# a.sort()
+# sum = 0
+# for i in range(len(a)):
+#     sum += a[i]*i
+# print(max(sum, sum1))
+# print(sum,sum1)
+
+# print(Maximize(a,len(a)))
+
+
+# ----------------------------------------------------------------------------
+
+# arr = [1, 2, 3, 4, 5, 6, 7]
+# d = 2
+# n = len(arr)
+# for i in range(d // 2):
+#        arr[i], arr[d-i-1] = arr[d-i-1], arr[i]
+
+# # Reverse the remaining n-d elements
+# for i in range(d, (n+d)//2):
+#        arr[i], arr[n+d-i-1] = arr[n+d-i-1], arr[i]
+
+# # # Reverse the entire array
+# for i in range(n // 2):
+#        arr[i], arr[n-i-1] = arr[n-i-1], arr[i]
+
+# for i in range(d):
+#     temp = arr[0]
+#     arr.remove(arr[0]) 
+#     arr.insert(n+1,temp)
+
+# Output: 3 4 5 6 7 1 2
+# print(arr)
+
+# n=5
+# a=0
+# b=1
+# for i in range(n):
+#     print(a)
+#     temp = a
+#     a = b
+#     b = temp+b
+
+
+# ----------------------------------------------------------------------------------
+
+
+# s = 'Geeks'
+# ans=s[::-1]
+# print(ans)
+
+
+# ----------------------------------------------------------------------
+
+
+# n = '1005'
+# for i in n:
+#     if i == '0':
+#         i,i = '5','0'
+# print(n)
+
+
+# list = ['1','2','3','4','5','6','7','8','9']
+# y = enumerate(list)
+# print(y)
+
+# ----------------------------------------------------------------
+
+# record = {'hemant': 10, 'rahul': 20, 'rajeev': 30, 'vishal': 40}
+# num = int(input("enter the number of student: "))
+# i = 1
+# while num>=i:
+#        name = input("Enter student name: ")
+#        marks = int(input("Enter the marks: "))
+#        record[name] = marks
+
+#        i +=1
+# print("here is your record :")
+# for i in record:
+#        print(i ,"\t", record[i])
+
+# print('\n',record)
+
+# key = input('Enter the name: ')
+# print(record.get(key,"dont know!!!!!"))
+# print(record.popitem())
+# record.popitem()
+# print(record)
+# print(record.keys())
+# print(record.values())
+
+# cop = record.copy()
+# cop.setdefault('sunny',50)
+# print(cop)
+
+
+# def fun(n):
+#     if n==0:
+#         return 0
+#     else:
+#         return n-1 + fun(n-1)
+# print(fun(5))
+
+# word = 'abctcba'
+# print(word[1],word[-1])
+# for i in range((len(word)//2)+1):
+#     if word[i-1]!= word[-i]:
+#         print('not palindrome')
+#         break
+# else:
+#     print('palindrome')
+
+# def fun(word):
+#     if len(word) <= 2:
+#         return True
+#     elif word[0] !=word[-1]:
+#         return False
+#     else:
+#         return fun(word[1:-1])
+
+# word = 'abcsdcba'
+
+# print(fun(word))
+
+
+# def spiral_iterative(left, right, n):
+#     point = left
+#     dist = right - left
+#     for i in range(n):
+#         dist /= 2
+#         if i % 2 == 0:
+#             point += dist * 2
+#         else:
+#             point -= dist * 2
+#         print(point)
+#     return float(point)
+
+
+# def spiral_recursive(left, right, n):
+#     mid = (left + right) / 2
+#     if n == 0:
+#         return left
+#     elif n % 2 == 0:
+#         return spiral_recursive(mid, right, n - 1)
+#     else:
+#         return spiral_recursive(left, mid, n - 1)
+
+
+# print(spiral_iterative(0,1,4))
+# print(spiral_recursive(0, 1, 4))
+
+
+# def fun(left, right,n):
+#     for i in range(n-1):
+#         mid = (left+right)/2
+#         if i%2==0:
+#             left = mid
+#         else:
+#             right = mid
+#     print(left)
+
+# def fun(left, right, n):
+#     mid = (left+right)/2
+#     if n == 0:
+#         return left
+#     elif n % 2 == 0:
+#         return fun(mid, right, n-1)
+#     else:
+#         return fun(left, mid, n-1)
+#     # print(left)
+
+
+# print(fun(0, 1, 4))
+
+
+# def count(L, word):
+#     if len(L)==0:
+#         return
+#     elif L[0]==word:
+#         cou +=1
+#     count =0
+#     for i in L:
+#         if i ==word:
+#             count +=1
+#     return count
+
+# print(count(['good', 'string', 'good', 'again', 'good'],'good'))
+
+
+# def non_decreasing(L):
+#     if len(L)==1:
+#         return True
+#     temp = L[1]
+#     if temp < L[0]:
+#         print(temp,L[0])
+#         return False
+#     else:
+#         return non_decreasing(L[1:])
+
+# L= [1, 1, 2, 3, 3, 5]
+
+# print( "This is your answer", non_decreasing(L))
+
+
+# -----------------------------------------------------------------
+
+# num = '5440'
+# dig = {1:'one',2:'two',3:'three',4:'four',5:'five',6:'six',7:'seven',8:'eight',9:'nine',0:'zero'}
+# for i in range(len(num)):
+#     print(num[i])
+#     print(dig[int(num[i])])
+# print(dig.get('one'))
+
+# value = 'four'
+# dic = []
+# for key, val in dig.items():
+#     if value == val:
+#         print(key)
+#         dic.append(key)
+
+# print(dic)
+# print(list[4])
+
+# --------------------------------------------------------------------------------------
+
+
+# words = "apple,and,oranges,are,only,fruits"
+# words = words.split(',')
+# print(words)
+# dic = {}
+# # print(words[0][0])
+# for word in words:
+#     if word[0] in dic:
+#         dic[word[0]].append(word)
+#     else:
+#         dic[word[0]] = [word]
+# print(dic)
+
+# words = "apple,and,oranges,are,only,fruits"
+# words = words.split(',')
+# print(words)
+# dic = {}
+# for word in words:
+#     if word[0] in dic:
+#         dic[word[0]].append(word)
+#     else:
+#         dic[word[0]] = [word]
+# print(dic)
+
+# li = [10, 20, 30, 40, 20, 50]
+
+
+# def reverse(li):
+# #     print(li)
+#     if len(li)==0:
+#         return []
+#     else:
+#         print(li)
+#         return [li[-1]] + reverse(li[:-1])
+
+# print(reverse(li))
+
+# _____________________________________________________________________________________
+
+
+# n = int(input( 'enter : '))
+# L=[]
+# ans = []
+# temp =[]
+# for i in range(n*n):
+#         L.append(input().split(','))
+
+# for i in range(n):
+#         for j in range(n):
+#                 ans.append(int(L[i][j])+int(L[i+n][j]))
+#         temp.append(ans)
+# print(L)
+# print(ans)
+# print(temp)
+
+# n = int(input("Enter n: ")) # Input n
+
+# L = []
+# ans = []
+# temp = []
+
+# # Input matrix A and B
+# for i in range(n * n):
+#     L.append(input().split(','))
+
+# # Calculate the sum of matrices A and B
+# for i in range(n):
+#     for j in range(n):
+#         ans.append(int(L[i][j]) + int(L[i + n][j]))
+#     temp.append(ans)
+#     ans = []
+
+# # Print the result in the desired format
+# print(temp)
+# for i in temp:
+#     print(",".join(str(j) for j in i))
+
+
+# for row in temp:
+#     print(",".join(str(element) for element in row))
+
+
+# n = int(input("Enter n :"))
+
+# A = []
+# for i in range(n):
+#     temp = list(map(int, input().split(',')))
+#     A.append(temp)
+# print(A)
+# B = []
+
+# for i in range(n):
+#     temp = list(map(int, input().split(',')))
+#     B.append(temp)
+
+# print(B)
+
+# ans = []
+# for i in range(n):
+#     k = []
+#     for j in range(n):
+#         k.append(A[i][j]+B[i][j])
+#     ans.append(k)
+
+# print(ans)
+# for row in ans:
+#     print(",".join(str(element) for element in row))
+
+
+# n = int(input('enter n :'))
+
+# ans = []
+# for i in range(n):
+#     k =[]
+#     for j in range(n):
+#         if i ==j:
+#             k.append(1)
+#         else:
+#             k.append(0)
+#     ans.append(k)
+# print(ans)
+
+
+# _____________________________________________________________________________
+
+# n = int(input('enter : '))
+
+# mat = []
+# for i in range(n):
+#     temp = list(map(int, input().split(',')))
+#     mat.append(temp)
+# key = list(map(int, input().split(',')))
+
+# all_dis = []
+# ans = []
+# min_dis = 1000
+# for i in range(n):
+#     dis = ((key[0]-mat[i][0])**2 + ((key[1]-mat[i][1])**2))**0.5
+
+#     all_dis.append(dis)
+
+#     if dis < min_dis:
+#         min_dis = dis
+#         ans = [mat[i]]
+#     elif dis == min_dis:
+#         ans.append(mat[i])
+
+# print(ans)
+# # print(key)
+# # print(mat)
+# print(all_dis)
+
+# ______________________________________________________________________________________
+
+# name = list(map(str, input().split(',')))
+# marks = list(map(int, input().split(',')))
+# ans = []
+# for i in range(len(marks)):
+#     for j in range(i, len(marks)):
+#         if marks[i] == marks[j] and name[i] != name[j]:
+#             temp = [name[i], name[j]]
+#             ans.append(temp)
+
+# print(ans)
+
+
+# ____________________________________________________________________
+
+
+# n  = int(input('enter : '))
+
+# a = []
+# for i in range(n):
+#     temp = list(map(int, input().split(',')))
+#     a.append(temp)
+
+# b = []
+# for i in range(n):
+#     temp = list(map(int, input().split(',')))
+#     b.append(temp)
+
+# ans = []
+# for i in range(n):
+#     l = []
+#     for j in range(n):
+#         temp = 0
+#         for k in range(n):
+#             temp += a[i][k]*b[k][j]
+#         l.append(temp)
+#     ans.append(l)
+
+# print(ans)
+
+
+# ____________________________________________________________________________________
+
+
+# num = list(map(int,input().split(',')))
+# num = sorted(num)
+# n = len(num)//2
+# print(num)
+# if len(num)%2!=0:
+#     print(num[n])
+# else:
+#     print((num[n-1]+num[n])//2)
+
+
+# _____________________________________________________________________________________
+
+
+# list = [1,2,3,4,6,7,8]
+# key = 5
+# list.append(key)
+
+# for i in range(len(list)):
+#     for j in range(len(list)):
+#         if list[i]<list[j]:
+#             list[i],list[j]=list[j],list[i]
+
+# print(list)
+
+# ___________________________________________________________________________________
+# temp = '987o35l7o4'
+# temp= input()
+# temp[0]
+# for i in temp:
+#     if
+
+
+# _______________________________________________________________________________________
+
+# L = [1, 3, 11, 18, 17, 23, 6, 8, 10]
+
+# def isPrime(n):
+#     if n == 0 or n == 1:
+#         return False
+#     for i in range(2, n):
+#         if n % i == 0:
+#             return False
+#     else:
+#         return True
+
+
+# def primes_galore(L):
+#     count = 0
+#     for i in range(len(L)):
+#         print(isPrime(i), i)
+#         if isPrime(i):
+#             print(isPrime(L[i]), L[i])
+#             if isPrime(L[i]):
+#                 count += 1
+#     return count
+
+
+# def std_dev(X):
+
+#     xi = []
+#     s = 0
+#     for i in X:
+#         s += i
+#     mean = s/len(X)
+#     print(mean,s)
+#     for i in X:
+#         xi.append((i-mean)**2)
+#     sum1 = 0
+#     print(xi)
+#     for i in xi:
+#         sum1 += i
+#     print(sum1)
+#     return sum1/len(xi)-1
+
+
+# X = [1,2,3,4,5,6,7,8,9]
+# sigma = std_dev(X)
+# print(f'{sigma:.2f}')
+
+
+# _________________________________________________________________
+# list = ["{", "}", "[", "]", "(", ")"]
+
+# def balanced(word):
+#     stack = []
+#     open = ['(', '{', '[']
+#     close = [')', '}', ']']
+
+#     for ch in word:
+#         if ch in open:
+#             stack.append(ch)
+#         elif ch in close:
+#             if len(stack) == 0:
+#                 return False
+#             last = stack.pop()
+#             if open.index(last) != close.index(ch):
+#                 return False
+
+#     if len(stack) == 0:
+#         return True
+#     else:
+#         return False
+
+# print(balanced([]))
+
+
+# lat = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm']
+# cod = ['z', 'y', 'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n']
+
+# str = 'apply'
+# temp =''
+
+# for i in str:
+#     if i in lat:
+#         temp += cod[lat.index(i)]
+#         print(i)
+#     else:
+#         temp += lat[cod.index(i)]
+#         print(i)
+
+# print(str)
+# print(temp)
+
+
+# _____________________________________________________________________
+
+
+# list = [1,2,3,4,5,6,7,8,9]
+
+# def swift(list,term):
+#     for i in range(term):
+#         num = list.pop()
+#         list.insert(0,num)
+        
+#     return list
+
+# print(swift(list,4))
+
+
+# _______________________________________________________________________
+
+
+# A=[[1,2,3],[4,5,6],[7,8,9]]
+# B=[[9,8,7],[6,5,4],[3,2,1]]
+# C=[[1,0,1],[1,0,1],[1,0,1]]
+# D=[[10,0,10],[10,0,10],[10,0,10]]
+
+
+# def product(a,b):
+#     result = []
+#     for i in range(len(a)):
+#         ans = []
+#         for j in range(len(a[0])):
+#             temp =0
+#             for k in range(len(a)):
+#                 temp += a[i][k]*b[k][j]
+#             ans.append(temp)
+#         result.append(ans)
+#     return result
+
+
+# temp = product(A,B)
+# temp2 = product(temp,C)
+# temp3 = product(temp2,D)
+# print(temp3)
+
+
+help(func_name)
