@@ -1378,7 +1378,7 @@
 
 # for i in range(d):
 #     temp = arr[0]
-#     arr.remove(arr[0]) 
+#     arr.remove(arr[0])
 #     arr.insert(n+1,temp)
 
 # Output: 3 4 5 6 7 1 2
@@ -1797,11 +1797,16 @@
 # print(list)
 
 # ___________________________________________________________________________________
+# def isint(num):
+#     if int(num) is int:
+#         return True
+#     else:
+#         return False
 # temp = '987o35l7o4'
 # temp= input()
 # temp[0]
 # for i in temp:
-#     if
+#     if isint(i):
 
 
 # _______________________________________________________________________________________
@@ -1905,7 +1910,7 @@
 #     for i in range(term):
 #         num = list.pop()
 #         list.insert(0,num)
-        
+
 #     return list
 
 # print(swift(list,4))
@@ -1939,4 +1944,164 @@
 # print(temp3)
 
 
-help(func_name)
+# ________________________________________________________________________________________
+
+# import string
+
+# # l = string.ascii_lowercase
+# l = list(string.ascii_lowercase)
+# p = list(string.ascii_uppercase)
+# # print(l)
+# # print(p)
+
+# for No,i in enumerate(l,1):
+#     l[i]  =
+#     print(f'{No} : {i}')
+
+# _________________________________________________________________________________________________
+
+
+# def fun(limit):
+#     for i in range(limit):
+#         yield i
+
+
+# print(next(fun(4)))
+# print(next(fun(4)))
+# print(next(fun(4)))
+# print(next(fun(4)))
+
+
+# def fen(n):
+#     for i in range(n):
+#         yield i*i
+# h = fen(4)
+# for i in range(4):
+#     print(next(h))
+
+
+# ________________________________________________________________________________
+
+
+# for i in range(2, 7):
+#     for j in range(1, i+1):
+#         print(j, end=' ')
+#     for j in range(i-1, 0, -1):
+#         print(j, end=' ')
+#     print()
+
+
+# coin = int(input())
+# a = int(input())
+# b = int(input())
+# c = int(input())
+
+# if a!=b and b!=c and c!=a and a+b+c == coin and a!=0 and b!=0 and c!=0:
+#     print('FAIR')
+# else:
+#     print('UNFAIR')
+# x = '1.5'
+# print(int(x[0]))
+
+
+# -------------------------------------------------------------------------------------
+
+
+
+# x = " hii i ma hemant raj let check "
+# ans = []
+# for i in x:
+#     if i in ['a','e','i','o','u']:
+#         continue
+#     else:
+#         ans.append(i)
+
+# ' '.join(ans)
+# print(ans)
+
+
+
+# =====
+
+
+
+# for char in 'a1b2c3d4e5':    
+#     if char in 'abcde':
+#         print('|', end = '') # there is no space between the quotes
+#         continue    
+#     print(char, end = '')  # there is no space between the quotes
+# print('|')
+
+# ==============================================
+
+
+# x= int(input())
+# y =0
+# while x > 1:
+#     x = x//2
+#     y +=1
+# print(y) 
+
+
+
+# ==================================================
+
+
+
+# string = 'no sentence can begin with because because because is a conjunction'
+
+# key = 'because'
+# # str = list(map(int, string.split(' ')))
+# string = string.split(' ')
+# a = 0
+# flag = False
+# for i in string:
+#     if key ==i:
+#         a +=1
+#         flag = True
+
+# if flag:
+#     print('YES')
+#     print(a)
+# else:
+#     print('NO')
+
+# ===========================================================
+
+# marks = [60,10,30,40,20,50]
+
+# for i in range(len(marks)):
+#     for j in range(i+1 , len(marks)):
+#         if marks[i]> marks[j]:
+#             marks[i],marks[j] = marks[j],marks[i]
+# n = len(marks)
+# if n % 2==1:
+#     print((marks[n//2]+ marks[(n//2)+1])//2)
+# else:
+#     print(marks[n//2])
+
+
+
+# ===========================================================
+
+
+
+n = int(input())
+mat =[]
+for j in range(n):
+    temp =[]
+    for a in range(n):
+        temp.append(list(map(int,input().split(','))))
+    mat.append(temp)
+
+
+print(mat)
+
+# multiplication
+mat1 =[[0,0],[0,0]]
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+           mat1[i][j] += mat[0][j][k]*mat[1][k][j]
+
+print(mat1)

@@ -1,1 +1,1 @@
-
+'CSK','DC','KKR','MI','PK','RR','RCB','SH'
