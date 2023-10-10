@@ -27,27 +27,4 @@ class Solution:
         return self.fect(n)/self.fect(n-r)
 
 
-ans = Solution()
-print(ans.nPr(5, 2))
-
-
-class Solution:
-    def fect(self, num):
-        # Compute factorial of num
-        factorial = 1
-        while num > 1:
-            factorial *= num
-            num -= 1
-        return factorial
-
-    def nPr(self, n, r):
-        # Compute nPr using factorials
-        # numerator = self.fect(n)
-        # denominator = self.fect(n-r)
-        # return numerator / denominator
-        return self.fect(n) / self.fect(n-r)
-
-
-# Create an instance of the Solution class and call the nPr method
-ans = Solution()
-print(ans.nPr(5, 2))  # Should print 20
+ans = Solutio

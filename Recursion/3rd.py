@@ -64,25 +64,25 @@
 
 # -----------------------------------------------------------------
 
-file = open('file.txt', 'r')
-num = file.readlines()
-temp = 0
-ans = 0
-# print(file.read())
-for No,line in enumerate(num,1):
-    length = len(line.rstrip())
-    # print(i)
-    # i.strip()
-    print(f"{No} :  {length} : {line}")
-print(line.strip(),end = ' ')
-print(len(int(line.strip())))
-if temp < length:
-    ans = line
-    temp = length
+# file = open('file.txt', 'r')
+# num = file.readlines()
+# temp = 0
+# ans = 0
+# # print(file.read())
+# for No,line in enumerate(num,1):
+#     length = len(line.rstrip())
+#     # print(i)
+#     # i.strip()
+#     print(f"{No} :  {length} : {line}")
+# print(line.strip(),end = ' ')
+# print(len(int(line.strip())))
+# if temp < length:
+#     ans = line
+#     temp = length
 
-print(ans)
-print(ans,temp,"final answer")
-print(len(num))
+# print(ans)
+# print(ans,temp,"final answer")
+# print(len(num))
 
 
 # _____________________________________________________________
@@ -179,6 +179,6 @@ print(len(num))
 # _______________________________________________________________________
 
 
-record = open('subRecord.txt','a')
-data = input()
-record.write(data)
+# record = open('subRecord.txt','a')
+# data = input()
+# record.write(data)

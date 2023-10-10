@@ -273,9 +273,7 @@
 #     print("you got it !")
 
 
-# ----------------------------------------------------------------------------
-
-
+# --------------------------------------------------------------------------
 # n = input()
 # x = []
 # while len(n)>0:
@@ -2007,7 +2005,6 @@
 # -------------------------------------------------------------------------------------
 
 
-
 # x = " hii i ma hemant raj let check "
 # ans = []
 # for i in x:
@@ -2020,15 +2017,13 @@
 # print(ans)
 
 
-
 # =====
 
 
-
-# for char in 'a1b2c3d4e5':    
+# for char in 'a1b2c3d4e5':
 #     if char in 'abcde':
 #         print('|', end = '') # there is no space between the quotes
-#         continue    
+#         continue
 #     print(char, end = '')  # there is no space between the quotes
 # print('|')
 
@@ -2040,12 +2035,10 @@
 # while x > 1:
 #     x = x//2
 #     y +=1
-# print(y) 
-
+# print(y)
 
 
 # ==================================================
-
 
 
 # string = 'no sentence can begin with because because because is a conjunction'
@@ -2081,27 +2074,25 @@
 #     print(marks[n//2])
 
 
-
 # ===========================================================
 
 
+# n = int(input())
+# mat =[]
+# for j in range(n):
+#     temp =[]
+#     for a in range(n):
+#         temp.append(list(map(int,input().split(','))))
+#     mat.append(temp)
 
-n = int(input())
-mat =[]
-for j in range(n):
-    temp =[]
-    for a in range(n):
-        temp.append(list(map(int,input().split(','))))
-    mat.append(temp)
 
+# print(mat)
 
-print(mat)
+# # multiplication
+# mat1 =[[0,0],[0,0]]
+# for i in range(n):
+#     for j in range(n):
+#         for k in range(n):
+#            mat1[i][j] += mat[0][j][k]*mat[1][k][j]
 
-# multiplication
-mat1 =[[0,0],[0,0]]
-for i in range(n):
-    for j in range(n):
-        for k in range(n):
-           mat1[i][j] += mat[0][j][k]*mat[1][k][j]
-
-print(mat1)
+# print(mat1)
