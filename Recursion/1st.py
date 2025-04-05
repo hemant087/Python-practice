@@ -47,6 +47,7 @@
 # print("hemant","raj", end = " ")
 # print("rahul", "raj",sep="//")
 # print(end=" ")
+# print("yes okk")
 
 # first_term= int(input("Enter the first term : "))
 # common_term= int(input("Enter the common term : "))
